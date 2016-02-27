@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webinar Registration Form</title>
+</head>
+<body>
+<style>
+    #theForm {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: #FFF0E0;
+    }
+
+    span {
+        color: red;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    #divToShow {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div id="theForm">
+        <h1>Регистрация за уебинар</h1>
+
+        <form action="/" method="post">
+            <div>
+                <p>Име и фамилия: <span>*    </span></p>
+                <input type="text" name="name" value=" "/>
+
+                <p>Адрес:</p>
+                <input type="text" name="name" value=" "/>
+
+                <p>Населено място:</p>
+                <input type="text" name="name" value=" "/>
+
+                <p>Пощенски код:</p>
+                <input type="text" name="name" value=" "/>
+
+                <p>Email: <span>*    </span></p>
+                <input type="email" name="name" value=" "/>
+
+                <p>Телефон: <span>*    </span></p>
+                <input type="text" name="name" value=" "/>
+
+                <p>Дата на семинара: <span>*    </span></p>
+                <input type="date" name="name" value=" "/>
+
+                <p>Желая фактура</p>
+                <input type="checkbox" id="checkBox" name="name" value=" " onclick="isChecked();"/>
+
+                <div id="divToShow">
+
+                    <p>Фирма/Организация: <span>*    </span></p>
+                    <input type="text" name="name" value=" "/>
+
+                    <p>МОЛ: <span>*    </span></p>
+                    <input type="text" name="name" value=" "/>
+
+                    <p>ЕИК: <span>*    </span></p>
+                    <input type="text" name="name" value=" "/>
+
+                    <p>ИН по ДДС: <span>*    </span></p>
+                    <input type="text" name="name" value=" "/>
+
+                    <p>Адрес: <span>*    </span></p>
+                    <input type="text" name="name" value=" "/>
+
+                </div>
+                <br>
+                <button type="button">Регистрирай се</button>
+                <button type="button">Изчисти</button>
+            </div>
+        </form>
+    </div>
+<script>
+    var radioButton = document.getElementById('checkBox');
+    var divToShow = document.getElementById('divToShow');
+
+    function isChecked() {
+        if (radioButton.checked) {
+            divToShow.style.display = 'block';
+        } else {
+            divToShow.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>

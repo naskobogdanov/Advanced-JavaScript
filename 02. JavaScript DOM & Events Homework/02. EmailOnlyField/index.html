@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Only Field</title>
+</head>
+<style>
+   body {
+       text-align: center;
+   }
+</style>
+<body>
+    <input id="input" type="text" style="width: 200px; margin: 0 auto">
+    <div id="display-field" style="width: 204px; margin: 0 auto">Validate an email</div>
+    <button id="button" onclick="validateEmail();">Validate</button>
+    <script>
+        function validateEmail()
+        {
+            var input = document.getElementById('input').value;
+            if (input !== '') {
+                var output = document.getElementById('display-field');
+                var re = /\S+@\S+\.\S+/;
+                if (re.test(input) === true) {
+                    output.style.backgroundColor = '#90EE90';
+                }
+                else {
+                    output.style.backgroundColor = 'red';
+                }
+                document.getElementById('display-field').innerText = input;
+            }
+            else {
+                document.getElementById('display-field').innerText = "This field could not be empty!";
+            }
+
+        }
+    </script>
+</body>
+</html>
